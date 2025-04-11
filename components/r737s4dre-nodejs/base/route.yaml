@@ -1,0 +1,18 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: r737s4dre-nodejs
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: r737s4dre-nodejs 
+  name: r737s4dre-nodejs
+spec:
+  port:
+    targetPort: 3001 
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: r737s4dre-nodejs
+    weight: 100 

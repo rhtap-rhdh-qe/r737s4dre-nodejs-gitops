@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: r737s4dre-nodejs
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: r737s4dre-nodejs 
+  name: r737s4dre-nodejs
+spec:
+  ports:
+  - port: 3001 
+    targetPort: 3001 
+  selector:
+    app.kubernetes.io/instance: r737s4dre-nodejs 

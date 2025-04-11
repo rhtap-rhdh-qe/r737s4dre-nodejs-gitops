@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: r737s4dre-nodejs-gitops
+  description: This is GitOps manifest for r737s4dre-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=r737s4dre-nodejs
+    backstage.io/kubernetes-id: r737s4dre-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: r737s4dre-nodejs
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:r737s4dre-nodejs
